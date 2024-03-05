@@ -3,30 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MobileNav from "./MobileNav";
+import linksData from "@/links.json";
 
 type Props = {};
 
 export const Navbar = (props: Props) => {
   const path = usePathname();
+  const link = linksData.links;
 
-  const link = [
-    {
-      link: "/",
-      name: "Home",
-    },
-    {
-      link: "/about",
-      name: "About",
-    },
-    {
-      link: "/project",
-      name: "Project",
-    },
-    {
-      link: "/contact",
-      name: "Contact",
-    },
-  ];
   return (
     <div className="h-[5vh] bg-red-300 flex justify-between  items-center px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
       {/* Mobile Navbar */}
