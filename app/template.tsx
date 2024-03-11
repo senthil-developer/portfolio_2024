@@ -6,7 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { usePathname } from "next/navigation";
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
 
-export default function template({ children }: { children: React.ReactNode }) {
+export default function Template({ children }: { children: React.ReactNode }) {
   const pathName = usePathname();
   return (
     <NextThemesProvider

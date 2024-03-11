@@ -16,13 +16,10 @@ import {
   NormalBufferAttributes,
   Object3DEventMap,
 } from "three";
-import { useControls } from "leva";
-import { useTheme } from "next-themes";
 
 export default function Model() {
   const { nodes } = useGLTF("/models/torrus.glb");
   const { viewport } = useThree();
-  const { theme } = useTheme();
   const torus =
     useRef<
       Mesh<
