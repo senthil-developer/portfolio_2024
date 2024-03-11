@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
+import { Space_Grotesk } from "next/font/google";
+import { cn } from "@/utils/cn";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -19,9 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en" suppressHydrationWarning>
+      <head />
       <body
-        className={`${inter.className} overflo w-hidden w-full h-full bg-gradient-to-b from-blue-50 to-red-100 `}
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased h-full",
+          spaceGrotesk.className
+        )}
       >
         {children}
       </body>

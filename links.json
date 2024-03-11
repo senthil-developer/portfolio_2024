@@ -16,5 +16,27 @@
       "link": "/contact",
       "name": "Contact"
     }
+  ],
+  "socialLinks": [
+    {
+      "link": "https://github.com/senthil-developer",
+      "src": "/github.png",
+      "name": "Github"
+    },
+    {
+      "link": "https://www.linkedin.com/senthil-developer",
+      "src": "/linkedin.png",
+      "name": "Linkedin"
+    },
+    {
+      "link": "https://facebook.com",
+      "src": "/facebook.png",
+      "name": "Facebook"
+    },
+    {
+      "link": "https://dribble.com",
+      "src": "/dribbble.png",
+      "name": "Dribbble"
+    }
   ]
 }

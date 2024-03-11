@@ -1,7 +1,16 @@
-type Props = {};
+import { Metadata } from "next";
 
-const Page = (props: Props) => {
-  return <div className="w-full flex">Hello World</div>;
+export const metadata: Metadata = {
+  title: "About",
+  icons: {
+    icon: "/next.svg",
+  },
 };
 
-export default Page;
+const AboutPage = () => {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center"></div>
+  );
+};
+
+export default AboutPage;
