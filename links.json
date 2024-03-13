@@ -5,38 +5,16 @@
       "name": "Home"
     },
     {
-      "link": "/about",
-      "name": "About"
+      "link": "/skills",
+      "name": "Skills"
     },
     {
-      "link": "/project",
-      "name": "Project"
+      "link": "/projects",
+      "name": "Projects"
     },
     {
       "link": "/contact",
       "name": "Contact"
-    }
-  ],
-  "socialLinks": [
-    {
-      "link": "https://github.com/senthil-developer",
-      "src": "/github.png",
-      "name": "Github"
-    },
-    {
-      "link": "https://www.linkedin.com/senthil-developer",
-      "src": "/linkedin.png",
-      "name": "Linkedin"
-    },
-    {
-      "link": "https://facebook.com",
-      "src": "/facebook.png",
-      "name": "Facebook"
-    },
-    {
-      "link": "https://dribble.com",
-      "src": "/dribbble.png",
-      "name": "Dribbble"
     }
   ]
 }

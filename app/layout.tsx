@@ -25,8 +25,8 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased h-full",
-          spaceGrotesk.className
+          "h-full antialiased bg-grid-black/[0.2] dark:bg-grid-white/[0.2]",
+          spaceGrotesk.className,
         )}
       >
         {children}

@@ -1,6 +1,4 @@
 import MotionDiv from "@/components/MotionDiv";
-import Image from "next/image";
-import heroImage from "@/public/hero.png";
 import CanvaScene from "@/components/Scene";
 
 export default async function Home() {
@@ -21,11 +19,11 @@ export default async function Home() {
 
   return (
     <MotionDiv className="h-full" {...variants}>
-      <div className="h-full flex flex-col-reverse lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 pt-10 dark:bg-grid-white/[0.2] bg-grid-black/[0.2] ">
+      <div className="flex h-full flex-col-reverse px-4 pt-10 sm:px-8 md:px-12 lg:flex-row lg:px-20 xl:px-48 ">
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
+        <div className="flex h-1/2 flex-col items-center justify-center gap-8 lg:h-full lg:w-1/2">
           {/* TITLE */}
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className="text-4xl font-bold md:text-6xl">
             Crafting Digital Experiences, Designing Tomorrow.
           </h1>
           {/* DESC */}
@@ -36,17 +34,17 @@ export default async function Home() {
             commitment to excellence.
           </p>
           {/* BUTTONS */}
-          <div className="w-full flex gap-4">
-            <button className="p-4 rounded-lg ring-1 ring-black">
+          <div className="flex w-full gap-4">
+            <button className="rounded-lg p-4 ring-1 ring-black">
               View My Work
             </button>
-            <button className="p-4 rounded-lg ring-1 ring-black">
+            <button className="rounded-lg p-4 ring-1 ring-black">
               Contact Me
             </button>
           </div>
         </div>
         {/* IMAGE CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 relative opacity-80">
+        <div className="relative h-1/2 w-full lg:h-full lg:w-1/2 ">
           <CanvaScene />
         </div>
       </div>

@@ -7,29 +7,36 @@ import { usePathname } from "next/navigation";
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
 
 export default function Template({ children }: { children: React.ReactNode }) {
-  const pathName = usePathname();
+  const pathName: string = usePathname();
+  const page = "/" || "/skills" || "/contact" || "/projects";
+
   return (
     <NextThemesProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="dark"
       enableSystem
       disableTransitionOnChange
     >
-      <motion.div
-        className="h-screen w-screen fixed rounded-b-[100px] z-40 bg-black dark:bg-white"
-        animate={{ height: "0vh" }}
-        exit={{ height: "140vh" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      />
-      <motion.div
-        className="fixed m-auto top-0 bottom-0 left-0 right-0  text-8xl cursor-default z-50 w-fit h-fit text-white dark:text-black"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        {pathName === "/" ? "home" : pathName.substring(1)}
-      </motion.div>
+      {pathName === page && (
+        <>
+          <motion.div
+            className="fixed z-40 h-screen w-screen rounded-b-[100px] bg-black dark:bg-white"
+            animate={{ height: "0vh" }}
+            exit={{ height: "140vh" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          />
+          <motion.div
+            className="fixed bottom-0 left-0 right-0 top-0 z-50  m-auto h-fit w-fit cursor-default text-8xl text-white dark:text-black"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            {pathName === "/" ? "home" : (pathName as string).substring(1)}
+          </motion.div>
+        </>
+      )}
+
       <main className="h-full">
         <Navbar />
         {children}

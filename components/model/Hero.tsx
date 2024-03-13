@@ -42,7 +42,7 @@ export default function Model() {
     backside: true,
   };
   return (
-    <group scale={viewport.width / 3}>
+    <group scale={viewport.width / 2.5}>
       <Text
         fontSize={0.9}
         font="/fonts/PPNeueMontreal-Bold.otf"

@@ -1,6 +1,6 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
-import Model from "./Model";
+import Model from "@/components/model/Hero";
 import { Environment } from "@react-three/drei";
 
 export default function CanvaScene() {
