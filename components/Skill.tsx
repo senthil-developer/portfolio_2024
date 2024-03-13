@@ -2,7 +2,6 @@
 
 import { Decal, Float, OrbitControls, useTexture } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
 
 const Ball = ({ url }: { url: string }) => {
   const [decal] = useTexture([url]);
@@ -37,10 +36,12 @@ const Skill = ({ url }: { url: string }) => {
       dpr={[1, 2]}
       className=""
     >
-      <Suspense fallback={null}>
-        <OrbitControls enableZoom={false} />
-        <Ball url={url} />
-      </Suspense>
+      <OrbitControls
+        enableZoom={false}
+        enableDamping={false}
+        enablePan={false}
+      />
+      <Ball url={url} />
     </Canvas>
   );
 };

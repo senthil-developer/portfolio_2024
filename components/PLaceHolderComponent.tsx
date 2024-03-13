@@ -1,17 +1,24 @@
-import Image from "next/image";
-import pageNotFound from "@/public/pageNotFound.png";
-type Props = {};
+import { cn } from "@/lib/utils";
+import Image, { StaticImageData } from "next/image";
 
-const PLaceHolderComponent = (props: Props) => {
+import { FC } from "react";
+
+type Props = {
+  className: string;
+  url: StaticImageData;
+};
+
+const PLaceHolderComponent: FC<Props> = ({ className, url }) => {
   return (
     <div className="relative flex h-full w-full items-center justify-center">
-      <div className="relative h-1/2 w-full md:h-full md:w-full">
+      <div className={cn("relative", className)}>
         <Image
-          src={pageNotFound}
+          src={url}
           alt="Page Not Found PlaceHolder"
           fill
           placeholder="blur"
           className="object-fill"
+          sizes="(max-width: 768px) 100vw,"
         />
       </div>
     </div>
