@@ -3,7 +3,6 @@ import Skill from "@/components/Skill";
 import { BackgroundGradient } from "@/components/backgroundGradient";
 import PLaceHolderComponent from "@/components/PLaceHolderComponent";
 import { Suspense } from "react";
-import { StaticImageData } from "next/image";
 
 import html from "@/public/skill/html.png";
 import react from "@/public/skill/react.png";
