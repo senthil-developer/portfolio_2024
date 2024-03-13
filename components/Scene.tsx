@@ -10,5 +10,5 @@ export default function CanvaScene() {
       <directionalLight intensity={2} position={[0, 2, 3]} />
       <Environment preset="city" />
     </Canvas>
-  );
+  )
 }

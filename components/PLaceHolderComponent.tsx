@@ -11,7 +11,7 @@ type Props = {
 const PLaceHolderComponent: FC<Props> = ({ className, url }) => {
   return (
     <div className="relative flex h-full w-full items-center justify-center">
-      <div className={cn("relative", className)}>
+      <div className={cn("relative animate-pulse", className)}>
         <Image
           src={url}
           alt="Page Not Found PlaceHolder"

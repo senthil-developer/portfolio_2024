@@ -37,12 +37,14 @@ const SkillsPage = () => {
     { icon: "/skill/git.png", name: "Git", placeholder: git },
   ];
   return (
-    <div className="flex h-full w-full flex-col ">
-      <div className="ark:bg-black mt-12 grid w-full grid-cols-2 gap-9 px-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+    <div className="flex h-full w-full  flex-col gap-6 ">
+      <h1 className="text-4xl font-bold">Skills</h1>
+
+      <div className="mt-12 grid w-full grid-cols-1 place-items-center gap-9 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {skills.map((skill, i) => (
           <BackgroundGradient
             key={i}
-            className="flex h-fit flex-col gap-3 rounded-[22px] bg-white py-4 text-center dark:bg-zinc-900"
+            className="flex h-fit w-[200px] flex-col gap-3 rounded-[22px] bg-zinc-950 p-4 text-center"
             animate={true}
           >
             <Suspense
@@ -55,7 +57,7 @@ const SkillsPage = () => {
             >
               <Skill url={skill.icon} />
             </Suspense>
-            <div className="">
+            <div className="text-lg text-white">
               <h3>{skill.name}</h3>
             </div>
           </BackgroundGradient>

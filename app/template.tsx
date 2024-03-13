@@ -37,7 +37,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         </>
       )}
 
-      <main className="h-full">
+      <main className="mx-0 h-full pt-[5vh] lg:mx-[10%] lg:w-[80%]">
         <Navbar />
         {children}
       </main>

@@ -20,7 +20,7 @@ export const Navbar = (props: Props) => {
       icon: GitHubLogoIcon,
     },
     {
-      link: "https://www.linkedin.com/senthil-developer",
+      link: "https://www.linkedin.com/in/senthil-developer",
       icon: LinkedInLogoIcon,
     },
     {
@@ -30,7 +30,7 @@ export const Navbar = (props: Props) => {
   ];
 
   return (
-    <div className="absolute top-0 z-50 flex h-[5vh] w-full  items-center justify-between gap-5 px-4 pt-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+    <div className="fixed top-0 z-50 flex h-[5vh] w-full items-center justify-between gap-5 backdrop-blur lg:w-[80%]">
       {/* Logo */}
       <Link
         href="/"
@@ -43,7 +43,7 @@ export const Navbar = (props: Props) => {
       </Link>
 
       {/* Web Navbar */}
-      <div className="hidden w-[80%] items-center justify-between gap-5 md:flex">
+      <div className="hidden w-full items-center justify-between gap-5 md:flex">
         <div className="flex gap-5">
           {link.map((item, index) => (
             <Link
@@ -58,7 +58,7 @@ export const Navbar = (props: Props) => {
               <span
                 className={`${
                   path !== item.link &&
-                  "w-[20%] rounded-md border-b-4 border-black duration-300 group-hover:w-[80%] dark:border-white"
+                  "w-[20%] rounded-2xl border-b-4 border-black duration-300 group-hover:w-[80%] dark:border-white"
                 }
               `}
               ></span>
@@ -73,6 +73,7 @@ export const Navbar = (props: Props) => {
                 href={item.link}
                 key={index}
                 className="group relative h-[24px] w-[24px]"
+                target="_blank"
               >
                 <Icon className="h-full w-full group-hover:scale-150 group-hover:transition-all group-hover:duration-300" />
               </Link>

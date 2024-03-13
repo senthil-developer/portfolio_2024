@@ -1,15 +1,18 @@
 "use client";
 
 import { Decal, Float, OrbitControls, useTexture } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
+import PLaceHolderComponent from "./PLaceHolderComponent";
+import { StaticImageData } from "next/image";
 
 const Ball = ({ url }: { url: string }) => {
   const [decal] = useTexture([url]);
+  const { viewport } = useThree();
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+    <Float speed={3} rotationIntensity={1} floatIntensity={0}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={viewport.width / 3}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="#fff8eb"
@@ -31,10 +34,9 @@ const Ball = ({ url }: { url: string }) => {
 const Skill = ({ url }: { url: string }) => {
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always"
       gl={{ preserveDrawingBuffer: true }}
-      dpr={[1, 2]}
-      className=""
+      style={{ width: "100%", height: "100%" }}
     >
       <OrbitControls
         enableZoom={false}

@@ -1,11 +1,6 @@
 import React, { useRef } from "react";
 
-import {
-  useGLTF,
-  Text,
-  MeshTransmissionMaterial,
-  Html,
-} from "@react-three/drei";
+import { useGLTF, Text, MeshTransmissionMaterial } from "@react-three/drei";
 
 import { useFrame, useThree } from "@react-three/fiber";
 import {
@@ -42,7 +37,7 @@ export default function Model() {
     backside: true,
   };
   return (
-    <group scale={viewport.width / 2.5}>
+    <group scale={viewport.width / 4}>
       <Text
         fontSize={0.9}
         font="/fonts/PPNeueMontreal-Bold.otf"
@@ -51,9 +46,9 @@ export default function Model() {
         anchorX="center"
         anchorY="middle"
       >
-        SENTHIL
+        HIRE ME!
       </Text>
-      <mesh ref={torus} {...nodes.Torus002}>
+      <mesh ref={torus} {...nodes.Torus002} scale={2}>
         <MeshTransmissionMaterial {...materialProps} />
       </mesh>
     </group>

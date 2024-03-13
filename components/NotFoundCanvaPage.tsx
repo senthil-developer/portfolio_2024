@@ -10,7 +10,7 @@ export default function Scene() {
     <Canvas
       orthographic
       style={{ background: theme === "light" ? "white" : "black" }}
-      camera={{ position: [0, 0, 1], zoom: 800 }}
+      camera={{ position: [0, 0, 1], zoom: 1000 }}
     >
       <Model />
       <directionalLight intensity={3} position={[0, 0.1, 1]} />
