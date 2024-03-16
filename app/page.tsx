@@ -19,13 +19,11 @@ export default async function Home() {
 
   return (
     <MotionDiv className="h-full" {...variants}>
-      <div className="flex h-full flex-col-reverse px-4 pt-10 sm:px-8 md:px-12 lg:flex-row lg:px-20 xl:px-48 ">
+      <div className="flex h-full flex-col px-4 pt-10 sm:px-8 md:px-12 lg:flex-row  xl:px-32 ">
         {/* TEXT CONTAINER */}
         <div className="flex h-1/2 flex-col items-center justify-center gap-8 lg:h-full lg:w-1/2">
           {/* TITLE */}
-          <h1 className="text-4xl font-bold md:text-6xl">
-            Crafting Digital Experiences, Designing Tomorrow.
-          </h1>
+          <h1 className="text-4xl font-bold md:text-6xl">Crafting</h1>
           {/* DESC */}
           <p className="md:text-xl">
             Welcome to my digital canvas, where innovation and creativity
@@ -44,8 +42,10 @@ export default async function Home() {
           </div>
         </div>
         {/* IMAGE CONTAINER */}
-        <div className="relative h-1/2 w-full lg:h-full lg:w-1/2 ">
-          <CanvaScene />
+        <div className="relative flex h-1/2 w-full  items-center justify-center  lg:h-full ">
+          <div className="h-full w-[70%] lg:w-[100%]">
+            <CanvaScene />
+          </div>
         </div>
       </div>
     </MotionDiv>

@@ -13,6 +13,9 @@ type Props = {};
 
 export const Navbar = (props: Props) => {
   const path = usePathname();
+  const splitUrl = path.slice(1);
+  const url = splitUrl.split("/")[0];
+  console.log(url);
   const link = linksData.links;
   const socialLink = [
     {
@@ -50,14 +53,14 @@ export const Navbar = (props: Props) => {
               href={item.link}
               key={index}
               className={`group flex flex-col ${
-                path === item.link &&
+                item.link.slice(1) === url &&
                 "rounded-md bg-yellow-300 px-2 text-black hover:bg-yellow-300/80 hover:transition-all hover:duration-300"
               }`}
             >
               {item.name}
               <span
                 className={`${
-                  path !== item.link &&
+                  item.link.slice(1) !== url &&
                   "w-[20%] rounded-2xl border-b-4 border-black duration-300 group-hover:w-[80%] dark:border-white"
                 }
               `}
